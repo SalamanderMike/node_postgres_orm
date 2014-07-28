@@ -1,9 +1,34 @@
 <!doctype html>
 <html>
   <head>
+  	<link rel="stylesheet" type="text/css" href="style.css">
   </head>
-  <body>
-    People Index
 
-  </body>
+<body>
+
+	<div>
+	  <form method="link" action="/people/new">
+			<input type="submit" value="NEW">
+	  </form>
+	  <form method="link" action="/people/find">
+			<input type="submit" value="FIND">
+	  </form>
+	  <form method="link" action="/people/find">
+			<input type="submit" value="EDIT">
+	  </form>
+	  <form method="link" action="/people/find">
+			<input type="submit" value="DELETE">
+	  </form>
+	</div>
+		<p>Ah, look at all the lonely people...</p><br>
+
+    <h1>The Lonely People...</h1>
+
+		<ul>
+	    <% people.forEach(function(person){ %>
+	    	<li><%= person.firstname +" "+ person.lastname %></li>
+	    <% }); %>
+	  </ul>
+
+</body>
 </html>

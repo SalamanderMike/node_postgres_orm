@@ -1,7 +1,25 @@
 <!doctype html>
 <html>
   <head>
+  	<link rel="stylesheet" type="text/css" href="../style.css">
   </head>
-  <body>
-  </body>
+
+<body>
+  <div>
+	  <form method="link" action="/people" id="home">
+  		<input type="submit" value="HOME">
+  	</form>
+	  <form method="link" action="/people/find">
+			<input type="submit" value="EDIT">
+		</form>
+  </div>
+  <p>...where do they all come from?</p><br>
+
+  <h1>Add New Person</h1><br>
+  <form method="post" action="/people/new">
+  	<input type="text" name="person[firstname]" placeholder="Eleanor">
+  	<input type="text" name="person[lastname]" placeholder="Rigby">
+  	<input type="submit" value="Add" style="background-color: #d6c7cf">
+  </form>
+</body>
 </html>

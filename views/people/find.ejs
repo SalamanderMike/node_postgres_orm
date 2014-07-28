@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+  	<link rel="stylesheet" type="text/css" href="../style.css">
+  </head>
+
+<body>
+  <div>
+	  <form method="link" action="/people" id="home">
+  		<input type="submit" value="HOME">
+  	</form>
+    <form method="link" action="/people/new">
+      <input type="submit" value="NEW">
+    </form>
+  </div>
+  <p>...where do they all belong?</p><br>
+  <h1>Find Person By Last Name</h1><br>
+  <form method="post" action="/people/find">
+  	<input type="text" name="person[lastname]" placeholder="Rigby">
+  	<input type="submit" value="Find" style="background-color: #d6c7cf">
+  </form>
+</body>
+</html>

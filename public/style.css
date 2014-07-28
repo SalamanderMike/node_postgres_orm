@@ -1,0 +1,65 @@
+html {
+	background: -webkit-linear-gradient(right, 	rgba(0,0,0,.2), 
+																							rgba(0,0,0,0));
+	text-align: center;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+@-webkit-keyframes fadein { 
+from {
+	opacity: 0;
+	}
+to {
+	opacity: 1;
+	}
+}
+
+div input {
+	-webkit-animation: fadein .15s ease-in;
+	cursor: pointer;
+	color: navy;
+	background: -webkit-linear-gradient(left, #d6c7cf, rgba(0,100,200,.1));
+	border: 0;
+	font-size: .6em;
+	margin: 0px 20px 40px 20px;
+}
+
+#home {
+	position: fixed;
+	left: 20px;
+}
+
+p {
+	-webkit-animation: fadein 4s ease-in;
+	font-style: italic;
+}
+
+h1 {
+	-webkit-animation: fadein .6s ease-in;
+	background: -webkit-linear-gradient(right, #d6c7cf, rgba(0,100,200,.1), white 95%);
+	font-size: 1.5em;
+	padding: 20px;
+	font-style: italic;
+
+}
+
+form, div {
+	-webkit-animation: fadein .45s ease-in;
+	display: inline;
+	border: 0;
+	font-size: 1.2em;
+
+}
+
+ul {
+	-webkit-animation: fadein .5s ease-in;
+	position: fixed;
+	left: 300px;
+	text-align: left;
+	list-style-type: none;
+}
+
+
+
+
+
+

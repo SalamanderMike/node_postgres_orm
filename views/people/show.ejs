@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+  	<link rel="stylesheet" type="text/css" href="../style.css">
+  </head>
+
+<body>
+
+	<div>
+		<form method="link" action="/people" id="home">
+  		<input type="submit" value="HOME">
+  	</form>
+	  <form method="link" action="/people/new">
+			<input type="submit" value="NEW">
+	  </form>
+	  <form method="link" action="/people/find">
+			<input type="submit" value="FIND ANOTHER PERSON?">
+	  </form>
+	</div>
+		
+		<p>...wearing the face that she keeps in a jar by the door...</p><br>
+    <h1>I found <em><%= people[0].firstname %> <%= people[0].lastname %>!</em>
+    <br>update <%= people[0].firstname %>? ...or delete?</h1>
+
+
+	   <form method="post" action="/people/update?_method=put">
+	  	<input type="text" name="person[firstname]" placeholder="first name">
+	  	<input type="text" name="person[lastname]" placeholder="last name">
+	  	<input type="hidden" name="person[id]" value="<%= people[0].id %>">
+	  	<input type="submit" style="background-color: #42ffd0; color: navy" value="UPDATE">
+	  </form>
+	   <form method="post" action="/people/delete?_method=delete">
+	  	<input type="hidden" name="person[id]" value="<%= people[0].id %>">
+	  	<input type="submit" style="background-color: #ff94c9; color: navy" value="DELETE">
+	  </form>
+
+</body>
+</html>
