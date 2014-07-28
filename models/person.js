@@ -24,7 +24,8 @@ Person.all = function(callback){ // callback = function from app.js
 Person.findBy = function(surname, callback) {// callback = function from app.js
   db.query("SELECT * FROM people WHERE lastname = $1;",[surname], function(err, res){
     if (res.rows[0] !== undefined){
-      foundPerson = [res.rows[0]];
+      var foundRow = [res.rows[0]];
+      var foundPerson = new Person(res.rows[0]);
     } else {
       foundPerson = false;
     }
